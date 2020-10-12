@@ -8,7 +8,6 @@ data class BlogRecord(
     val createdAt: LocalDateTime = LocalDateTime.now()
 )
 
-
 data class UserSession(
     val username: String,
     val idToken: String

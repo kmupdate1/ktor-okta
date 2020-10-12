@@ -10,8 +10,7 @@ class BlogRecordRepository {
         records += BlogRecord(userHandle, text)
     }
 
-    fun byUser(userHandle: String)
-        = records.filter { it.userHandle == userHandle }
+    fun byUser(userHandle: String) = records.filter { it.userHandle == userHandle }
 }
 
 val blogRecords = BlogRecordRepository().apply {
