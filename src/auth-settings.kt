@@ -33,5 +33,3 @@ fun OktaConfig.asOAuth2Config(): OAuthServerSettings.OAuth2ServerSettings =
         defaultScopes = listOf("openid", "profile"),
         requestMethod = Post
     )
-
-
