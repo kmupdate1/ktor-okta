@@ -49,7 +49,6 @@ class MainTemplate(private val currentUsername: String? = null) : Template<HTML>
                                 }
                             }
                         }
-
                     }
                 }
             }
@@ -61,7 +60,6 @@ class MainTemplate(private val currentUsername: String? = null) : Template<HTML>
         }
     }
 }
-
 
 /**
  * Displays feed block only
@@ -115,5 +113,3 @@ fun FlowContent.feedPage(title: String, records: List<BlogRecord>, canPostMessag
     h2("text-center") { +title }
     feedBlock(records.sortedByDescending(BlogRecord::createdAt))
 }
-
-

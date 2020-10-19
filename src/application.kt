@@ -12,7 +12,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.cio.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
 fun Application.module() {
-    // We use sessions stored in signed cookies
+    // Sessions are stored in encrypted cookies
     install(Sessions) {
         cookie<UserSession>("MY_SESSION") {
             val secretEncryptKey = hex("00112233445566778899aabbccddeeff")
@@ -38,7 +38,6 @@ fun Application.module() {
     // Register application routes
     setupRoutes()
 }
-
 
 // Shortcut for the current session
 val ApplicationCall.session: UserSession?

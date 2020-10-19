@@ -8,7 +8,7 @@ import io.ktor.routing.*
 
 
 fun Application.setupRoutes() = routing {
-    post("/") { 
+    post("/") {
         val actor = call.session?.username
             ?: throw Exception("User must be logged in first")
         val text = call.receiveParameters()["text"]?.takeIf(String::isNotBlank)
@@ -30,4 +30,3 @@ fun Application.setupRoutes() = routing {
         }
     }
 }
-
