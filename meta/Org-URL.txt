@@ -1,0 +1,3 @@
+Issuer URI    : https://dev-7991339.okta.com/oauth2/default
+ClientID      : Ooa1dnnxreSx4qorJ5d6
+Client secret : YPxRp15FoLldOEKV4EMJhfvAK9ryZP9nBuoEFYiM
