@@ -43,3 +43,4 @@ fun Application.module() {
 // Shortcut for the current session
 val ApplicationCall.session: UserSession?
     get() = sessions.get<UserSession>()
+ 

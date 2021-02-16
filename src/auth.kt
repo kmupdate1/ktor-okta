@@ -9,6 +9,7 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 import io.ktor.util.*
+import java.time.Duration
 
 @KtorExperimentalAPI
 fun Application.setupAuth() {
@@ -16,10 +17,12 @@ fun Application.setupAuth() {
     val accessTokenVerifier = JwtVerifiers.accessTokenVerifierBuilder()
         .setAudience(oktaConfig.audience)
         .setIssuer(oktaConfig.orgUrl)
+        .setConnectionTimeout(Duration.ofSeconds(1))
         .build()
     val idVerifier = JwtVerifiers.idTokenVerifierBuilder()
         .setClientId(oktaConfig.clientId)
         .setIssuer(oktaConfig.orgUrl)
+        .setConnectionTimeout(Duration.ofSeconds(1))
         .build()
 
     install(Authentication) {
